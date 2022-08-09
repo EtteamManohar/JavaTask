@@ -9,6 +9,15 @@ public class Task8 {
         double mean=(double) sum / (double) n;
         return mean;
     }
+    private static double Median(int arr[], int n) {
+
+        Arrays.sort(arr);
+        if (n % 2 != 0) {
+            return (double) arr[n / 2];
+        }
+
+        return (double) (arr[(n - 1) / 2] + arr[n / 2]) / 2.0;
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the size of the array");
@@ -19,5 +28,6 @@ public class Task8 {
             array[i] = scanner.nextInt();
         }
         System.out.println("Mean of array is:" + Mean(array, size));
+        System.out.println("Median of array is:" + Median(array, size));
     }
 }
