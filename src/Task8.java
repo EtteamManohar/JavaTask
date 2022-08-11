@@ -1,5 +1,6 @@
 import java.util.*;
 public class Task8 {
+    //Mean
     public static double Mean(int array[], int n) {
         int sum = 0;
         for (int i = 0; i < n; i++) {
@@ -9,6 +10,7 @@ public class Task8 {
         double mean=(double) sum / (double) n;
         return mean;
     }
+    //Median
     private static double Median(int arr[], int n) {
 
         Arrays.sort(arr);
